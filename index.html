@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.ball{
+			height: 150px;
+			width: 150px;
+			background: red;
+			border-radius: 50%;
+			position: absolute;
+			
+		}
+		.ball1{
+			height: 150px;
+			width: 150px;
+			background: blue;
+			border-radius: 50%;
+			position: absolute;
+
+			
+		}
+	</style>
+</head>
+<body>
+	<h1>Очки: <span class="score"></span></h1>
+	
+	<div class="ball" style="margin-left: 10%; margin-top: 5%"></div>
+	<div class="ball" style="margin-left: 20%; margin-top: 8%"></div>
+	<div class="ball" style="margin-left: 60%; margin-top: 15%"></div>
+	<div class="ball" style="margin-left: 30%; margin-top: 9%"></div>
+	<div class="ball" style="margin-left: 5%; margin-top: 20%"></div>
+	<div class="ball" style="margin-left: 25%; margin-top: 31%"></div>
+	<div class="ball" style="margin-left: 49%; margin-top: 30%"></div>
+	<div class="ball" style="margin-left: 40%; margin-top: 10%"></div>
+	<div class="ball" style="margin-left: 80%; margin-top: 15%"></div>
+	<div class="ball" style="margin-left: 75%; margin-top: 20%"></div>
+
+
+	<div class="ball1" style="margin-left: 16%; margin-top: 15%"></div>
+	<div class="ball1" style="margin-left: 26%; margin-top: 10%"></div>
+	<div class="ball1" style="margin-left: 66%; margin-top: 30%"></div>
+	<div class="ball1" style="margin-left: 36%; margin-top: 29%"></div>
+	<div class="ball1" style="margin-left: 14%; margin-top: 35%"></div>
+	<div class="ball1" style="margin-left: 34%; margin-top: 46%"></div>
+	<div class="ball1" style="margin-left: 57%; margin-top: 45%"></div>
+	<div class="ball1" style="margin-left: 49%; margin-top: 15%"></div>
+	<div class="ball1" style="margin-left: 89%; margin-top: 20%"></div>
+	<div class="ball1" style="margin-left: 84%; margin-top: 35%"></div>
+	
+	<script type="text/javascript">
+		/*;fmvkdf
+		lkfvmdkv
+		dlfkvmdkv*/
+let score = 0;
+let x = function(){
+	for(let index = 0; index<10; index= index +1){
+		balls[index].style.display = "none";
+	}
+};
+let y = function(){
+	for(let index = 0; index<10; index= index +1){
+		ballz[index].style.display = "none";
+	}
+};
+let balls = document.querySelectorAll(".ball")
+let ballz = document.querySelectorAll(".ball1")
+
+for(let index = 0; index<10; index= index +1)
+	balls[index].onclick = function(){
+	balls[index].style.transform = "scale(0)";
+	balls[index].style.transition = "3s";
+    score = score + 1;
+    document.querySelector(".score").innerHTML = score;
+}
+for(let index = 0; index<10; index= index +1)
+	ballz[index].onclick = function(){
+	ballz[index].style.transform = "scale(0)";
+	ballz[index].style.transition = "3s";
+    score = score - 10;
+    document.querySelector(".score").innerHTML = score;
+}
+setTimeout(x,9000);
+setTimeout(y,9000);
+		
+	</script>
+</body>
+</html>
